@@ -1,0 +1,5 @@
+#className=com.test.reflect.demo.Student
+#methodName=love
+
+className=com.test.reflect.demo.Teacher
+methodName=eat
