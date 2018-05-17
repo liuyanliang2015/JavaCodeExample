@@ -7,7 +7,6 @@ package com.test.thread.runnableDemo;
  * @author LiuYanliang
  */
 public class SellTicket implements Runnable {
-	// ¶¨Òå100ÕÅÆ±
 	private static int tickets = 100;
 
 	@Override
@@ -22,10 +21,10 @@ public class SellTicket implements Runnable {
 							e.printStackTrace();
 						}
 						System.out.println(Thread.currentThread().getName()
-								+ "ÕıÔÚ³öÊÛµÚ" + (tickets--) + "ÕÅÆ±");
+								+ "ï¿½ï¿½ï¿½Ú³ï¿½ï¿½Ûµï¿½" + (tickets--) + "ï¿½ï¿½Æ±");
 					} else {
 						System.out.println(Thread.currentThread().getName()
-								+ "Æ±ÂôÍêÁË");
+								+ "Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 						break;
 					}
 				}
@@ -40,7 +39,6 @@ public class SellTicket implements Runnable {
 	}
 
 	/**
-	 * static synchronizedÍ¬²½·½·¨
 	 * @return
 	 */
 	public static synchronized boolean sell() {
@@ -51,10 +49,10 @@ public class SellTicket implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println(Thread.currentThread().getName() + "ÕıÔÚ³öÊÛµÚ"
-					+ (tickets--) + "ÕÅÆ±");
+			System.out.println(Thread.currentThread().getName() + "ï¿½ï¿½ï¿½Ú³ï¿½ï¿½Ûµï¿½"
+					+ (tickets--) + "ï¿½ï¿½Æ±");
 		} else {
-			System.out.println(Thread.currentThread().getName() + "Æ±ÂôÍêÁË");
+			System.out.println(Thread.currentThread().getName() + "Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			flag = false;
 		}
 		return flag;

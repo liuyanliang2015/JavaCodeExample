@@ -1,36 +1,37 @@
-/**
- * 
- */
 package com.test.thread;
-
-/**
- * @author LiuYanliang
- *
- */
-public class ThreadDemo {
+public class ThreadDemo extends Thread{
+	//瀹氫箟100寮犵エ
+	private static int tickets = 100;
+	
+	@Override
+	public void run() {
+		for (int i = 0; i < 100; i++) {
+			 sell();
+		}
+	}
+	
+	//鍞エ鏂规硶
+	public void sell() {
+		if(tickets > 0){
+			tickets--;
+			System.out.println(Thread.currentThread().getName()+":"+tickets);
+		}
+		
+	}
+	
+	//娴嬭瘯main
 	public static void main(String[] args) {
-		//继承Thread类
-		new Thread(){
-			public void run() {
-				for(int i = 0 ;i<100;i++){
-					System.out.println(Thread.currentThread().getName()+":"+i);
-				}
-			};
-			
-		}.start();
+		ThreadDemo t1 = new ThreadDemo();
+		t1.setName("绐楀彛1");
+		t1.start();
 		
+		ThreadDemo t2 = new ThreadDemo();
+		t2.setName("绐楀彛2");
+		t2.start();
 		
-		//实现Runnable接口
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				for(int i = 0 ;i<100;i++){
-					System.out.println(Thread.currentThread().getName()+":"+i);
-				}
-			}
-		}){
-			
-		}.start();
+		ThreadDemo t3 = new ThreadDemo();
+		t3.setName("绐楀彛3");
+		t3.start();
 	}
 
 }
