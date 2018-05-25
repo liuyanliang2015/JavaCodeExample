@@ -4,12 +4,12 @@
 package com.test.thread.producerConsumers;
 
 /**
- * 包子对象
+ * 鍖呭瓙瀵硅薄
  */
 public class BaoZi {
 	private String name;
 	private float price;
-	 boolean flag = false; //默认false
+	 boolean flag = false; //榛樿false
 
 	public BaoZi() {
 

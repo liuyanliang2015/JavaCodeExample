@@ -8,16 +8,16 @@ package com.test.thread.extendsDemo;
  */
 public class SellTicket extends Thread {
 	
-	//¶¨Òå100ÕÅÆ±(¶à¸öÏß³Ì¹²Ïí×ÊÔ´)
+	//å®šä¹‰100å¼ ç¥¨(å¤šä¸ªçº¿ç¨‹å…±äº«èµ„æº)
 	private static int tickets = 100;
 			
 	@Override
 	public void run() {
 		while(true){
 			if(tickets > 0){
-				System.out.println(getName()+"ÕıÔÚ³öÊÛµÚ"+(tickets--)+"ÕÅÆ±");
+				System.out.println(getName()+"æ­£åœ¨å‡ºå”®ç¬¬"+(tickets--)+"å¼ ç¥¨");
 			}else{
-				System.out.println("Æ±ÂôÍêÁË");
+				System.out.println("ç¥¨å–å®Œäº†");
 				break;
 			}
 		}

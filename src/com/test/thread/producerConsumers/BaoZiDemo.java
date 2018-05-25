@@ -4,7 +4,7 @@
 package com.test.thread.producerConsumers;
 
 /**
- * ²âÊÔÀà
+ * æµ‹è¯•ç±»
  */
 public class BaoZiDemo {
 	public static void main(String[] args) {

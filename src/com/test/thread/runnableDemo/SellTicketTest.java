@@ -15,9 +15,9 @@ public class SellTicketTest {
 		Thread t2 = new Thread(st);
 		Thread t3 = new Thread(st);
 		
-		t1.setName("´°¿Ú1");
-		t2.setName("´°¿Ú2");
-		t3.setName("´°¿Ú3");
+		t1.setName("çª—å£1");
+		t2.setName("çª—å£2");
+		t3.setName("çª—å£3");
 		
 		t1.start();
 		t2.start();

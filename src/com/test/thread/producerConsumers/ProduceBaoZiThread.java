@@ -5,7 +5,7 @@ package com.test.thread.producerConsumers;
 
 
 /**
- *°ü×ÓÉú²úÕßÏß³Ì
+ *åŒ…å­ç”Ÿäº§è€…çº¿ç¨‹
  */
 public class ProduceBaoZiThread implements Runnable {
 	private BaoZi bz;
@@ -31,10 +31,10 @@ public class ProduceBaoZiThread implements Runnable {
 				}
 				
 				if(x % 2 == 0){
-					bz.setName("ÖíÈâ´ó´Ğ°ü×Ó");
+					bz.setName("çŒªè‚‰å¤§è‘±åŒ…å­");
 					bz.setPrice(2.0f);
 				}else{
-					bz.setName("¾Â²Ë¼¦µ°°ü×Ó");
+					bz.setName("éŸ­èœé¸¡è›‹åŒ…å­");
 					bz.setPrice(1.5f);
 				}
 				x++;

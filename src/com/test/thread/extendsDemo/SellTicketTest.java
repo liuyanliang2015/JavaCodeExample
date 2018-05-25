@@ -12,9 +12,9 @@ public class SellTicketTest {
 		SellTicket st1 = new SellTicket();
 		SellTicket st2 = new SellTicket();
 		SellTicket st3 = new SellTicket();
-		st1.setName("´°¿Ú1");
-		st2.setName("´°¿Ú2");
-		st3.setName("´°¿Ú3");
+		st1.setName("çª—å£1");
+		st2.setName("çª—å£2");
+		st3.setName("çª—å£3");
 		
 		st1.start();
 		st2.start();

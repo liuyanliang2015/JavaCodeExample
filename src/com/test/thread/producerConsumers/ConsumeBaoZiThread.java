@@ -4,7 +4,7 @@
 package com.test.thread.producerConsumers;
 
 /**
- * °ü×ÓÏû·ÑÕßÏß³Ì
+ * åŒ…å­æ¶ˆè´¹è€…çº¿ç¨‹
  */
 public class ConsumeBaoZiThread implements Runnable {
 

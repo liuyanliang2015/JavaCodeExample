@@ -12,14 +12,14 @@ import java.util.concurrent.Executors;
  */
 public class ExecutorsDemo {
 	public static void main(String[] args) {
-		//´´½¨Ïß³Ì³Ø¶ÔÏó
+		//åˆ›å»ºçº¿ç¨‹æ± å¯¹è±¡
 		ExecutorService  executorService = Executors.newFixedThreadPool(2);
 		
-		//Ö´ĞĞÏß³Ì
+		//æ‰§è¡Œçº¿ç¨‹
 		executorService.submit(new MyThread());
 		executorService.submit(new MyThread());
 		
-		//½áÊøÏß³Ì³Ø
+		//ç»“æŸçº¿ç¨‹æ± 
 		executorService.shutdown();
 	}
 }

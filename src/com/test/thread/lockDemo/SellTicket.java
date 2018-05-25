@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author LiuYanliang
  */
 public class SellTicket implements Runnable {
-	// ¶¨Òå100ÕÅÆ±
+	// å®šä¹‰100å¼ ç¥¨
 	private static int tickets = 100;
 	private final ReentrantLock lock = new ReentrantLock();
 
@@ -18,7 +18,7 @@ public class SellTicket implements Runnable {
 		for (int i = 0; i < 100; i++) {
 
 			try {
-				// »ñÈ¡Ëø
+				// è·å–é”
 				lock.lock();
 				if (tickets > 0) {
 					try {
@@ -27,14 +27,14 @@ public class SellTicket implements Runnable {
 						e.printStackTrace();
 					}
 					System.out.println(Thread.currentThread().getName()
-							+ "ÕıÔÚ³öÊÛµÚ" + (tickets--) + "ÕÅÆ±");
+							+ "æ­£åœ¨å‡ºå”®ç¬¬" + (tickets--) + "å¼ ç¥¨");
 				} else {
 					System.out.println(Thread.currentThread().getName()
-							+ "Æ±ÂôÍêÁË");
+							+ "ç¥¨å–å®Œäº†");
 					break;
 				}
 			} finally {
-				// ÊÍ·ÅËø
+				// é‡Šæ”¾é”
 				lock.unlock();
 			}
 
