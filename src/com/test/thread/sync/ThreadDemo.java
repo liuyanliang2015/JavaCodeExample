@@ -1,4 +1,8 @@
 package com.test.thread.sync;
+/**
+ * 当多个线程访问MyThread的run()方法时，以排队的方式进行处理(这里的排队是按照CPU分配的先后顺序而定的，具有不可预测性）
+ *
+ */
 public class ThreadDemo extends Thread{
 	//定义100张票
 	private static int tickets = 100;

@@ -1,4 +1,13 @@
 package com.test.thread.sync;
+
+/**
+ * static synchronized 锁住的是当前类的class对象
+ * 该对象在JVM内存中只有一份，不会重复加载，所以三个线程只有一把锁，会线程阻塞，实现同步的效果
+ * 
+ * 举个例子：三个人上厕所，只有一个坑，一把锁。一个人进去，上锁，其他人只能等着。
+ * 等里面的人出来，释放锁，别人才能接住锁，入坑。
+ *
+ */
 public class ThreadDemo2 extends Thread{
 	//定义100张票
 	private static int tickets = 100;
@@ -11,14 +20,11 @@ public class ThreadDemo2 extends Thread{
 	}
 	
 	//售票方法
-	public  void sell() {
-		synchronized (ThreadDemo2.class) {
+	public static synchronized  void sell() {
 			if(tickets > 0){
 				tickets--;
 				System.out.println(Thread.currentThread().getName()+":"+tickets);
 			}
-		}
-		
 	}
 	
 	//测试main
