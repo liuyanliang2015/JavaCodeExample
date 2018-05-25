@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public class MyInvocationHandler implements InvocationHandler{
-	private Object target;//目标对象
+	private Object target;//鐩爣瀵硅薄
 	
 	public MyInvocationHandler(Object target){
 		this.target = target;
@@ -16,7 +16,7 @@ public class MyInvocationHandler implements InvocationHandler{
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)throws Throwable {
 		Object result = method.invoke(target, args);
-		System.out.println("记录日志");
+		System.out.println("璁板綍鏃ュ織");
 		return result;
 	}
 

@@ -15,7 +15,7 @@ public class RingPhoneDecorate extends PhoneDecorate {
 	
 	@Override
 	public void call() {
-		System.out.println("Ìı²ÊÁå");
+		System.out.println("å¬å½©é“ƒ");
 		super.call();
 	}
 

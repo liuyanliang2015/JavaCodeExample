@@ -10,7 +10,7 @@ package com.test.model.template;
 public abstract class GetTime {
 	
 	/**
-	 * 模板方法：计算程序的执行时间
+	 * 妯℃澘鏂规硶锛氳绠楃▼搴忕殑鎵ц鏃堕棿
 	 * @return
 	 */
 	public long getTime() {

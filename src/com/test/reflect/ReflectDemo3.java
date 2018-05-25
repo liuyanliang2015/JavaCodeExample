@@ -12,27 +12,27 @@ import java.lang.reflect.Method;
  */
 public class ReflectDemo3 {
 	public static void main(String[] args) throws Exception {
-		//(1)»ñÈ¡×Ö½ÚÂëÎÄ¼ş¶ÔÏó
+		//(1)è·å–å­—èŠ‚ç æ–‡ä»¶å¯¹è±¡
 		Class c  = Class.forName("com.test.reflect.Person");
-		//»ñÈ¡public¹«¹²³ÉÔ±·½·¨(°üº¬¸¸ÀàÖĞµÄ·½·¨)
+		//è·å–publicå…¬å…±æˆå‘˜æ–¹æ³•(åŒ…å«çˆ¶ç±»ä¸­çš„æ–¹æ³•)
 		//Method[] methods = c.getMethods();
-		//»ñÈ¡ËùÓĞµÄ³ÉÔ±·½·¨(²»°üº¬¸¸Àà)
+		//è·å–æ‰€æœ‰çš„æˆå‘˜æ–¹æ³•(ä¸åŒ…å«çˆ¶ç±»)
 		/*Method[] methods = c.getDeclaredMethods();
 		for(Method m : methods){
 			System.out.println(m);
 		}*/
 		
-		//(2)»ñÈ¡³ÉÔ±·½·¨¶ÔÏó
+		//(2)è·å–æˆå‘˜æ–¹æ³•å¯¹è±¡
 		Method showMethod = c.getMethod("show");
 		Method meMethod = c.getDeclaredMethod("method", String.class);
 		Method functionMethod = c.getDeclaredMethod("function");
 		functionMethod.setAccessible(true);
 		
 		Method getStringMethod = c.getDeclaredMethod("getString", String.class,int.class);
-		//(3)Í¨¹ıÎŞ²Î¹¹Ôì·½·¨´´½¨¶ÔÏó
+		//(3)é€šè¿‡æ— å‚æ„é€ æ–¹æ³•åˆ›å»ºå¯¹è±¡
 		Constructor con = c.getConstructor();
 		Object obj = con.newInstance();
-		//(4)Ö´ĞĞ·½·¨
+		//(4)æ‰§è¡Œæ–¹æ³•
 		showMethod.invoke(obj);
 		meMethod.invoke(obj, "hello");
 		functionMethod.invoke(obj);

@@ -9,12 +9,12 @@ package com.test.reflect.demo4;
  */
 public interface UserDao {
 	/**
-	 * 登录接口
+	 * 鐧诲綍鎺ュ彛
 	 */
 	public boolean login();
 	
 	/**
-	 * 注册接口
+	 * 娉ㄥ唽鎺ュ彛
 	 */
 	public void register();
 }

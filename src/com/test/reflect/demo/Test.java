@@ -8,9 +8,9 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 
 /**
- *¿ª·¢ÖĞĞèÇóÊÇ±ä»¯µÄ£ºÓĞÊ±ºòĞèÒªÖ´ĞĞÑ§ÉúµÄlove·½·¨£¬ÓĞÊ±ºòĞèÒªÖ´ĞĞ½ÌÊ¦µÄlove·½·¨¡£ºóÀ´ÓÖÔö¼ÓÁË¹¤ÈË£¬ÔõÃ´°ìÄØ?
- *ĞèÇóµÄ±ä»¯£¬³ÌĞòÔ±²»ÄÜ¿ØÖÆ£¬µ«ÊÇÎÒÃÇ¾¡Á¿ÈÃÉè¼Æ¸üÁé»î£¬ÓĞÀ©Õ¹ĞÔ¡£
- *·´ÉäĞèÒªÅäºÏÅäÖÃÎÄ¼şÊ¹ÓÃ£¬ÕâÀïÓÃreflect.txt´úÌæÅäÖÃÎÄ¼ş
+ *å¼€å‘ä¸­éœ€æ±‚æ˜¯å˜åŒ–çš„ï¼šæœ‰æ—¶å€™éœ€è¦æ‰§è¡Œå­¦ç”Ÿçš„loveæ–¹æ³•ï¼Œæœ‰æ—¶å€™éœ€è¦æ‰§è¡Œæ•™å¸ˆçš„loveæ–¹æ³•ã€‚åæ¥åˆå¢åŠ äº†å·¥äººï¼Œæ€ä¹ˆåŠå‘¢?
+ *éœ€æ±‚çš„å˜åŒ–ï¼Œç¨‹åºå‘˜ä¸èƒ½æ§åˆ¶ï¼Œä½†æ˜¯æˆ‘ä»¬å°½é‡è®©è®¾è®¡æ›´çµæ´»ï¼Œæœ‰æ‰©å±•æ€§ã€‚
+ *åå°„éœ€è¦é…åˆé…ç½®æ–‡ä»¶ä½¿ç”¨ï¼Œè¿™é‡Œç”¨reflect.txtä»£æ›¿é…ç½®æ–‡ä»¶
  */
 public class Test {
 	public static void main(String[] args) throws Exception {
@@ -30,12 +30,12 @@ public class Test {
 		System.out.println(className);
 		System.out.println(methodName);
 		
-		//·´Éä£º
-		//»ñÈ¡class×Ö½ÚÂëÎÄ¼ş¶ÔÏó
+		//åå°„ï¼š
+		//è·å–classå­—èŠ‚ç æ–‡ä»¶å¯¹è±¡
 		Class c = Class.forName(className);
 		Method method = c.getMethod(methodName);
 		
-		//»ñÈ¡¶ÔÏó
+		//è·å–å¯¹è±¡
 		Object obj = c.newInstance();
 		method.invoke(obj);
 		

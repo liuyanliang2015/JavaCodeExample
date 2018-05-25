@@ -25,20 +25,20 @@ public class SendThread implements Runnable {
 	@Override
 	public void run() {
 		try {
-			//·â×°¼üÅÌÂ¼ÈëÊı¾İ
+			//å°è£…é”®ç›˜å½•å…¥æ•°æ®
 	        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	        String line = null;
 	        while((line = br.readLine())!= null){
 	            if("886".equals(line)){
 	                break;
 	            }
-	            // ´´½¨Êı¾İ£¬²¢°ÑÊı¾İ´ò°ü
+	            // åˆ›å»ºæ•°æ®ï¼Œå¹¶æŠŠæ•°æ®æ‰“åŒ…
 	            byte[] bys = line.getBytes();
 	            DatagramPacket dp = new DatagramPacket(bys, bys.length,InetAddress.getByName("192.168.9.255"), 8888);
-	            // µ÷ÓÃSocketµÄsend·½·¨£¬·¢ËÍÊı¾İ°ü
+	            // è°ƒç”¨Socketçš„sendæ–¹æ³•ï¼Œå‘é€æ•°æ®åŒ…
 	            sendDs.send(dp);
 	        }
-	        // ÊÍ·Å×ÊÔ´
+	        // é‡Šæ”¾èµ„æº
 	        sendDs.close();
 		} catch (Exception e) {
 			e.printStackTrace();

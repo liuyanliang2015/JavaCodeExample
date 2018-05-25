@@ -9,11 +9,11 @@ package com.test.reflect.demo;
  */
 public class Teacher {
 	public void love(){
-		System.out.println("°®Éú»î£¬°®½ÌÑ§");
+		System.out.println("çˆ±ç”Ÿæ´»ï¼Œçˆ±æ•™å­¦");
 	}
 	
 	public void eat(){
-		System.out.println("½ÌÊ¦³Ô·¹");
+		System.out.println("æ•™å¸ˆåƒé¥­");
 	}
 
 }

@@ -16,7 +16,7 @@ public class GamePhoneDecorate extends PhoneDecorate{
 	@Override
 	public void call() {
 		super.call();
-		System.out.println("ÍæÓÎÏ·");
+		System.out.println("ç©æ¸¸æˆ");
 	}
 
 }

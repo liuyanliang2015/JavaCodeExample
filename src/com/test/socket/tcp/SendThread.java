@@ -27,10 +27,10 @@ public class SendThread implements Runnable {
 		System.out.println("s-run");
 		try {
 			
-			//¼üÅÌÊäÈë×Ö·ûÁ÷
+			//é”®ç›˜è¾“å…¥å­—ç¬¦æµ
 	        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	         
-	        //°ÑÍ¨µÀÄÚµÄÁô°ü×°Ò»ÏÂ
+	        //æŠŠé€šé“å†…çš„ç•™åŒ…è£…ä¸€ä¸‹
 	        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 	         
 	        String line = null;
@@ -43,7 +43,7 @@ public class SendThread implements Runnable {
 	            bw.flush();
 	        }
 	         
-	        //ÊÍ·Å×ÊÔ´
+	        //é‡Šæ”¾èµ„æº
 	        //bw.close();
 	        //br.close();
 	        socket.close();

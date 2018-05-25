@@ -12,16 +12,16 @@ import java.lang.reflect.Field;
  */
 public class ReflectDemo2 {
 	public static void main(String[] args) throws Exception {
-		//(1)»ñÈ¡×Ö½ÚÂëÎÄ¼ş¶ÔÏó
+		//(1)è·å–å­—èŠ‚ç æ–‡ä»¶å¯¹è±¡
 		Class c  = Class.forName("com.test.reflect.Person");
-		//»ñÈ¡public¹«¹²³ÉÔ±±äÁ¿
+		//è·å–publicå…¬å…±æˆå‘˜å˜é‡
 		//Field[] fields = c.getFields();
-		//»ñÈ¡ËùÓĞ³ÉÔ±±äÁ¿
+		//è·å–æ‰€æœ‰æˆå‘˜å˜é‡
 		/*Field[] fields = c.getDeclaredFields();
 		for(Field f :fields){
 			System.out.println(f);
 		}*/
-		//(2)»ñÈ¡µ¥¸öpublic³ÉÔ±±äÁ¿
+		//(2)è·å–å•ä¸ªpublicæˆå‘˜å˜é‡
 		Field addressField = c.getField("address");
 		System.out.println(addressField);
 		
@@ -31,16 +31,16 @@ public class ReflectDemo2 {
 		Field ageField = c.getDeclaredField("age");
 		System.out.println(ageField);
 		
-		//(3)Í¨¹ıÎŞ²Î¹¹Ôì·½·¨´´½¨¶ÔÏó
+		//(3)é€šè¿‡æ— å‚æ„é€ æ–¹æ³•åˆ›å»ºå¯¹è±¡
 		Constructor con = c.getConstructor();
 		Object obj = con.newInstance();
-		//(4)ÉèÖÃ·Çpulic³ÉÔ±±äÁ¿¿É·ÃÎÊ:½«Ö¸¶¨¶ÔÏó±äÁ¿ÉÏ´Ë Field ¶ÔÏó±íÊ¾µÄ×Ö¶ÎÉèÖÃÎªÖ¸¶¨µÄĞÂÖµ
+		//(4)è®¾ç½®épulicæˆå‘˜å˜é‡å¯è®¿é—®:å°†æŒ‡å®šå¯¹è±¡å˜é‡ä¸Šæ­¤ Field å¯¹è±¡è¡¨ç¤ºçš„å­—æ®µè®¾ç½®ä¸ºæŒ‡å®šçš„æ–°å€¼
 		nameField.setAccessible(true);
-		//(5)ÉèÖÃ³ÉÔ±±äÁ¿µÄÖµ
-		nameField.set(obj, "ÁÖÇàÏ¼");
+		//(5)è®¾ç½®æˆå‘˜å˜é‡çš„å€¼
+		nameField.set(obj, "æ—é’éœ");
 		ageField.set(obj, 27);
-		addressField.set(obj, "±±¾©");
-		//ÑéÖ¤
+		addressField.set(obj, "åŒ—äº¬");
+		//éªŒè¯
 		System.out.println(obj);
 	}
 

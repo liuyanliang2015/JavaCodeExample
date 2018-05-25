@@ -14,15 +14,15 @@ import java.util.concurrent.Future;
  */
 public class CallableDemo {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		// ´´½¨Ïß³Ì³Ø¶ÔÏó
+		// åˆ›å»ºçº¿ç¨‹æ± å¯¹è±¡
 		ExecutorService executorService = Executors.newFixedThreadPool(2);
-		//Ö´ÐÐCallable
+		//æ‰§è¡ŒCallable
 		Future<Integer> result1 = executorService.submit(new MyCallable(10));
 		System.out.println(result1.get()); //55
 		
 		Future<Integer> result2 = executorService.submit(new MyCallable(100));
 		System.out.println(result2.get());//5050
-		//¹Ø±ÕÏß³Ì³Ø
+		//å…³é—­çº¿ç¨‹æ± 
 		executorService.shutdown();
 	}
 

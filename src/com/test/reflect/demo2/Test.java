@@ -15,10 +15,10 @@ public class Test {
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 		//arrayList.add("hello"); error
 		arrayList.add(10);
-		//通过看add()源码，可以看出，其实底层需要传的是E，默认是Object
-		//泛型只是给编译器看的,通过反编译，可以看出来，运行的时候，其实是没有泛型的
+		//閫氳繃鐪媋dd()婧愮爜锛屽彲浠ョ湅鍑猴紝鍏跺疄搴曞眰闇�瑕佷紶鐨勬槸E锛岄粯璁ゆ槸Object
+		//娉涘瀷鍙槸缁欑紪璇戝櫒鐪嬬殑,閫氳繃鍙嶇紪璇戯紝鍙互鐪嬪嚭鏉ワ紝杩愯鐨勬椂鍊欙紝鍏跺疄鏄病鏈夋硾鍨嬬殑
 		
-		//通过反编译存储字符串
+		//閫氳繃鍙嶇紪璇戝瓨鍌ㄥ瓧绗︿覆
 		Class c = arrayList.getClass();
 		Method addMethod = c.getMethod("add", Object.class);
 		addMethod.invoke(arrayList, "hello");

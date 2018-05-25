@@ -6,7 +6,7 @@ package com.test.thread.callable;
 import java.util.concurrent.Callable;
 
 /**
- *线程求和
+ *绾跨▼姹傚拰
  */
 public class MyCallable implements Callable<Integer> {
 	private int number;

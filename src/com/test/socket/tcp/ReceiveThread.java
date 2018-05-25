@@ -26,18 +26,18 @@ public class ReceiveThread implements Runnable {
 		System.out.println("r-run");
 		while (true) {
 			try {
-				// 监听客户端连接，返回一个对应的Socket对象
+				// 鐩戝惉瀹㈡埛绔繛鎺ワ紝杩斿洖涓�涓搴旂殑Socket瀵硅薄
 		        Socket socket = serverSocket.accept();
-		        // 读取数据(获取输入流，读数据，显示在控制台)-包装通道内容的流
+		        // 璇诲彇鏁版嵁(鑾峰彇杈撳叆娴侊紝璇绘暟鎹紝鏄剧ず鍦ㄦ帶鍒跺彴)-鍖呰閫氶亾鍐呭鐨勬祦
 		        BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		        String line = null;
 		        while ((line = br.readLine()) != null) {
 		            String ip = socket.getInetAddress().getHostAddress();
 		            System.out.println(ip + "->" + line);
 		        }
-		        //释放资源
+		        //閲婃斁璧勬簮
 		        socket.close();
-		        //serverSocket.close(); 服务器不关闭
+		        //serverSocket.close(); 鏈嶅姟鍣ㄤ笉鍏抽棴
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

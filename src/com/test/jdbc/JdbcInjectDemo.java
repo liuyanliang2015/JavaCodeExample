@@ -25,7 +25,7 @@ public class JdbcInjectDemo {
 	}
 
 	/**
-	 * ÓÃ»§µÇÂ¼
+	 * ç”¨æˆ·ç™»å½•
 	 * @param userName
 	 * @param passWord
 	 */
@@ -34,21 +34,21 @@ public class JdbcInjectDemo {
 		Statement stmt = null;
 		ResultSet rs = null;
 		try {
-			// ¼ÓÔØÊı¾İ¿âÇı¶¯
+			// åŠ è½½æ•°æ®åº“é©±åŠ¨
 			Class.forName("com.mysql.jdbc.Driver");
-			// »ñÈ¡Êı¾İ¿âÁ¬½Ó
+			// è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(
 					"jdbc:mysql://192.168.0.7:3306/ssmp", "root", "root");
-			// »ñÈ¡sqlÖ´ĞĞÕß
+			// è·å–sqlæ‰§è¡Œè€…
 			stmt = conn.createStatement();
-			// Ö´ĞĞsqlÓï¾ä
+			// æ‰§è¡Œsqlè¯­å¥
 			String sql = "SELECT * from ssmp_account WHERE ACCOUNT_NAME ='"+userName+"' and PASSWORD='"+passWord+"'";
 			System.out.println(sql);
 			rs = stmt.executeQuery(sql);
 			if(rs.next()) {
-				System.out.println("µÇÂ¼³É¹¦");
+				System.out.println("ç™»å½•æˆåŠŸ");
 			}else{
-				System.out.println("ÕËºÅ»òÕßÃÜÂë´íÎó");
+				System.out.println("è´¦å·æˆ–è€…å¯†ç é”™è¯¯");
 			}
 
 		} catch (ClassNotFoundException e) {

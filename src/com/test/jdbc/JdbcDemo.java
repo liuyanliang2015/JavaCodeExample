@@ -30,7 +30,7 @@ public class JdbcDemo {
 	
 	
 	/**
-	 * ×¼±¸¹¤×÷£º»ñÈ¡Êı¾İ¿âÇı¶¯ºÍÊı¾İ¿âÁ¬½Ó
+	 * å‡†å¤‡å·¥ä½œï¼šè·å–æ•°æ®åº“é©±åŠ¨å’Œæ•°æ®åº“è¿æ¥
 	 */
 	@Before
 	public void testBefore() {
@@ -39,9 +39,9 @@ public class JdbcDemo {
 		sb.append("useUnicode=true&characterEncoding=UTF8");
 		
 		try {
-			//¼ÓÔØÊı¾İ¿âÇı¶¯
+			//åŠ è½½æ•°æ®åº“é©±åŠ¨
 			Class.forName("com.mysql.jdbc.Driver");
-			//»ñÈ¡Êı¾İ¿âÁ¬½Ó
+			//è·å–æ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(sb.toString(), userName, passWord);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -52,17 +52,17 @@ public class JdbcDemo {
 	}
 	
 	/**
-	 * StatementÖ´ĞĞsqlÓï¾ä
+	 * Statementæ‰§è¡Œsqlè¯­å¥
 	 */
 	@Test
 	public void testJdbc1() {
 		try {
-			//»ñÈ¡sqlÖ´ĞĞÕß
+			//è·å–sqlæ‰§è¡Œè€…
 			stmt = conn.createStatement();
-			//Ö´ĞĞsqlÓï¾ä
+			//æ‰§è¡Œsqlè¯­å¥
 			rs = stmt.executeQuery(sql);
 			while (rs.next()) {
-				// ×¢Òâ£ºÏÂ±ê´Ó1¿ªÊ¼
+				// æ³¨æ„ï¼šä¸‹æ ‡ä»1å¼€å§‹
 				System.out.println(rs.getInt(1));
 			}
 		} catch (SQLException e) {
@@ -73,19 +73,19 @@ public class JdbcDemo {
 
 	
 	/**
-	 * PreparedStatementÖ´ĞĞsqlÓï¾ä
+	 * PreparedStatementæ‰§è¡Œsqlè¯­å¥
 	 */
 	
 	@Test
 	public void testJdbc2() {
 		try {
 			pstmt = conn.prepareStatement(sql2);
-			//parameterIndex²ÎÊıÏÂ±ê£¬´Ó1¿ªÊ¼£¬x²ÎÊıÖµ
+			//parameterIndexå‚æ•°ä¸‹æ ‡ï¼Œä»1å¼€å§‹ï¼Œxå‚æ•°å€¼
 			pstmt.setInt(1, 5);
-			// Ö´ĞĞsqlÓï¾ä
+			// æ‰§è¡Œsqlè¯­å¥
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
-				// ×¢Òâ£ºÏÂ±ê´Ó1¿ªÊ¼
+				// æ³¨æ„ï¼šä¸‹æ ‡ä»1å¼€å§‹
 				System.out.println(rs.getInt(1));
 			}
 		} catch (SQLException e) {
@@ -96,7 +96,7 @@ public class JdbcDemo {
 	
 
 	/**
-	 * ÊÍ·Å×ÊÔ´£ºÏÈµÃµ½µÄºó¹Ø±Õ
+	 * é‡Šæ”¾èµ„æºï¼šå…ˆå¾—åˆ°çš„åå…³é—­
 	 */
 	@After
 	public void testAfter() {

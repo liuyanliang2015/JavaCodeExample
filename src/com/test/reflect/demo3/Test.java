@@ -10,9 +10,9 @@ package com.test.reflect.demo3;
  */
 public class Test {
 	public static void main(String[] args) throws Exception {
-		Student s = new Student("Áõ±¸",40);
-		Tool.setProperty(s, "name", "ÕÅ·É");
-		System.out.println(s); //Student [name=ÕÅ·É, age=40]
+		Student s = new Student("åˆ˜å¤‡",40);
+		Tool.setProperty(s, "name", "å¼ é£ž");
+		System.out.println(s); //Student [name=å¼ é£ž, age=40]
 	}
 
 }

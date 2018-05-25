@@ -11,15 +11,15 @@ import java.lang.reflect.Constructor;
  */
 public class ReflectDemo1 {
 		public static void main(String[] args) throws Exception {
-			//(1)»ñÈ¡Class¶ÔÏó£¬±ØĞë´øÈ«Â·¾¶£¬´ø°üÃû
+			//(1)è·å–Classå¯¹è±¡ï¼Œå¿…é¡»å¸¦å…¨è·¯å¾„ï¼Œå¸¦åŒ…å
 			Class c4 = Class.forName("com.test.reflect.Person");
-			//(2)»ñÈ¡¹¹Ôì·½·¨¶ÔÏó
+			//(2)è·å–æ„é€ æ–¹æ³•å¯¹è±¡
 			Constructor  c = c4.getDeclaredConstructor(String.class,int.class);
 			System.out.println(c);//public com.test.reflect.Person(java.lang.String,int,java.lang.String)
-			//±©Á¦·ÃÎÊË½ÓĞ¹¹ÔìÆ÷£¬ÖµÎªtrueÔòÖ¸Ê¾·´ÉäµÄ¶ÔÏóÔÚÊ¹ÓÃÊ±Ó¦¸ÃÈ¡ÏûJavaÓïÑÔ·ÃÎÊ¼ì²é
+			//æš´åŠ›è®¿é—®ç§æœ‰æ„é€ å™¨ï¼Œå€¼ä¸ºtrueåˆ™æŒ‡ç¤ºåå°„çš„å¯¹è±¡åœ¨ä½¿ç”¨æ—¶åº”è¯¥å–æ¶ˆJavaè¯­è¨€è®¿é—®æ£€æŸ¥
 			c.setAccessible(true);
-			//Ê¹ÓÃ¹¹Ôì·½·¨¶ÔÏóµÄ·½·¨,´´½¨¶ÔÏó
-			Object obj  = c.newInstance("ÁÖÇàÏ¼",27);
+			//ä½¿ç”¨æ„é€ æ–¹æ³•å¯¹è±¡çš„æ–¹æ³•,åˆ›å»ºå¯¹è±¡
+			Object obj  = c.newInstance("æ—é’éœ",27);
 			System.out.println(obj);
 		}
 

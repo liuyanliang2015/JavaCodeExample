@@ -10,13 +10,13 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public boolean login() {
-		System.out.println("登录功能");
+		System.out.println("鐧诲綍鍔熻兘");
 		return false;
 	}
 
 	@Override
 	public void register() {
-		System.out.println("注册功能");
+		System.out.println("娉ㄥ唽鍔熻兘");
 	}
 
 }

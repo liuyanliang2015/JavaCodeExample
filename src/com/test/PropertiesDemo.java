@@ -11,8 +11,8 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * public void load(Reader reader):°ÑÎÄ¼şÖĞµÄÊı¾İ¶ÁÈ¡µ½¼¯ºÏÖĞ
- * public void store(Writer writer,String comments):°Ñ¼¯ºÏÖĞµÄÊı¾İ´æ´¢µ½ÎÄ¼ş
+ * public void load(Reader reader):æŠŠæ–‡ä»¶ä¸­çš„æ•°æ®è¯»å–åˆ°é›†åˆä¸­
+ * public void store(Writer writer,String comments):æŠŠé›†åˆä¸­çš„æ•°æ®å­˜å‚¨åˆ°æ–‡ä»¶
  */
 public class PropertiesDemo {
 	public static void main(String[] args) throws Exception {
@@ -21,7 +21,7 @@ public class PropertiesDemo {
 	}
 
 	/**
-	 * PropertiesĞ´ÎÄ¼ş
+	 * Propertieså†™æ–‡ä»¶
 	 * @throws Exception
 	 */
 	private static void myStore() throws Exception {
@@ -33,7 +33,7 @@ public class PropertiesDemo {
 	
 	
 	/**
-	 * Properties¶ÁÎÄ¼ş
+	 * Propertiesè¯»æ–‡ä»¶
 	 * @throws Exception
 	 */
 	private static void myLoad() throws Exception {

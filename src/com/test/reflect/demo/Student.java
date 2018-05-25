@@ -12,11 +12,11 @@ public class Student {
 		
 	}
 	public void love(){
-		System.out.println("°®Éú»î£¬°®±à³Ì");
+		System.out.println("çˆ±ç”Ÿæ´»ï¼Œçˆ±ç¼–ç¨‹");
 	}
 	
 	public void eat(){
-		System.out.println("Ñ§Éú³Ô·¹");
+		System.out.println("å­¦ç”Ÿåƒé¥­");
 	}
 
 }

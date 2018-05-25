@@ -13,7 +13,7 @@ public class Test {
 	public static void main(String[] args) {
 		UserDao ud = new UserDaoImpl();
 		MyInvocationHandler myInvocationHandler = new MyInvocationHandler(ud);
-		//´´½¨udµÄ¶¯Ì¬´úÀí¶ÔÏó
+		//åˆ›å»ºudçš„åŠ¨æ€ä»£ç†å¯¹è±¡
 		UserDao proxy = (UserDao)Proxy.newProxyInstance(ud.getClass().getClassLoader(), ud.getClass().getInterfaces(), myInvocationHandler);
 		proxy.login();
 	}
