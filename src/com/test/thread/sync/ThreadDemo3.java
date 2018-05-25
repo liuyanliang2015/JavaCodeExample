@@ -1,7 +1,7 @@
 package com.test.thread.sync;
 /**
- *synchronized代码块，锁的是ThreadDemo3.class
- *等效于ThreadDemo2
+ *synchronized代码块，具体看锁住的对象是什么，该对象在内存中是否唯一
+ *本例锁的是ThreadDemo3.class，等效于ThreadDemo2
  */
 public class ThreadDemo3 extends Thread{
 	//定义100张票
