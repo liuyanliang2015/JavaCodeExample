@@ -13,7 +13,7 @@ public class TestCopyFile {
 	
 	/**
 	 * 利用 java.io类库，直接为源文件构建一个 FileInputStream读取，然后再为目标文件构建一个 FileOutputStream，完成写入工作。
-	 * @param source
+	 * @param source 
 	 * @param dest
 	 * @throws IOException
 	 */

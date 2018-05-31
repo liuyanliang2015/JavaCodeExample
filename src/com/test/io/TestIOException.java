@@ -11,7 +11,7 @@ import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 
 /**
- * 考察IO异常处理以及流关闭问题
+ * 考察IO异常处理以及流关闭问题 
  */
 public class TestIOException {
 	public static void main(String[] args) {
