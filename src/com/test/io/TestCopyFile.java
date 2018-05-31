@@ -15,7 +15,6 @@ import java.nio.channels.FileChannel;
  */
 public class TestCopyFile {
 
-	
 	/**
 	 * 利用 java.io类库，直接为源文件构建一个 FileInputStream读取，然后再为目标文件构建一个 FileOutputStream，完成写入工作。
 	 * 当我们使用输入输出流进行读写时，实际上是进行了多次上下文切换，
