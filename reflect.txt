@@ -3,20 +3,3 @@
 
 className=com.test.reflect.demo.Teacher
 methodName=eat
-
-
-sdasdas
-
-asdasdas
-
-
-12312412412
-
-
-qweqwewq
-
-
-qweqwewq
-
-
-qeweqwe
